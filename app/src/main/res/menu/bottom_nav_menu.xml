@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="Профіль"/>
+    <item
+        android:id="@+id/navigation_activity"
+        android:icon="@drawable/ic_activity"
+        android:title="Активність"/>
+    <item
+        android:id="@+id/navigation_tariffs"
+        android:icon="@drawable/ic_tariffs"
+        android:title="Тарифи"/>
+    <item
+        android:id="@+id/navigation_services"
+        android:icon="@drawable/ic_services"
+        android:title="Послуги"/>
+</menu>
