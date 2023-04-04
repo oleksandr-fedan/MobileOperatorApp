@@ -21,7 +21,7 @@ public class SpendingDetailsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new RecyclerView.ViewHolder(
-                LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_activity__details_spending_item, parent, false)) {
+                LayoutInflater.from(parent.getContext()).inflate(R.layout.spending_details_item, parent, false)) {
         };
     }
 

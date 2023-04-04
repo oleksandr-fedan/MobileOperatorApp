@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tariff_item__title_cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="1dp"
+        android:background="@drawable/primary_blue_bg">
+
+        <TextView
+            android:id="@+id/tariff_item__tariff_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginVertical="8dp"
+            android:layout_marginStart="15dp"
+            android:text="Назва тарифу"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_regular"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tariff_item__tariff_details_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginVertical="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/custom_orange_bt"
+            android:drawableStart="@drawable/ic_down_arrow"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="4dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tariff_item__tariff_details_cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tariff_item__title_cl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="61dp"
+        android:paddingHorizontal="15dp"
+        android:paddingBottom="15dp"
+        android:visibility="gone"
+        android:background="@drawable/primary_orange_bg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tariff_item__internet_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="15dp"
+            android:background="@drawable/primary_blue_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Мобільний інтернет"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tariff_item__internet_quantity_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="99 999 мб"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="20sp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tariff_item__minutes_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tariff_item__internet_cl"
+            android:layout_marginTop="15dp"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="15dp"
+            android:background="@drawable/primary_blue_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Хвилини у мережі"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tariff_item__minutes_quantity_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Безліміт"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="20sp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tariff_item__other_minutes_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tariff_item__minutes_cl"
+            android:layout_marginTop="15dp"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="15dp"
+            android:background="@drawable/primary_blue_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Хв. на ін. операторів"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tariff_item__other_minutes_quantity_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="10 000 min"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="20sp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tariff_item__sms_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tariff_item__other_minutes_cl"
+            android:layout_marginTop="15dp"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="15dp"
+            android:background="@drawable/primary_blue_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="SMS"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tariff_item__sms_quantity_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Недоступно"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="20sp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tariff_item__price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tariff_item__sms_cl"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="15dp"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="15dp"
+            android:text="999 грн/міс"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="20sp"
+            android:background="@drawable/primary_blue_bg"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            app:layout_constraintTop_toBottomOf="@id/tariff_item__sms_cl"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="15dp"
+            android:text="Підключити"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:background="@drawable/custom_blue_bt"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
