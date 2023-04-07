@@ -45,7 +45,7 @@ public class ActivityFragment extends Fragment {
         recyclerView.addItemDecoration(new ItemSpacingDecoration(DpToPixels.convert(15, getContext())));
         recyclerView.setAdapter(adapter);
 
-        ScrollView outerScrollView = view.findViewById(R.id.fragment_activity__root_sv);
+
     }
 
     @Override

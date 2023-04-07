@@ -77,7 +77,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:text="Баланс"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:fontFamily="@font/roboto_regular"
             android:textSize="20sp"/>
 
@@ -88,7 +88,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:text="9999 грн"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:fontFamily="@font/roboto_regular"
             android:textSize="20sp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -104,7 +104,7 @@
         android:paddingVertical="8dp"
         android:paddingHorizontal="15dp"
         android:text="Поповнити"
-        android:fontFamily="@font/roboto_regular"
+        android:fontFamily="@font/roboto_medium"
         android:textSize="22sp"
         android:textAllCaps="false"
         android:background="@drawable/custom_orange_bt"/>
@@ -127,7 +127,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:text="Тариф"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:fontFamily="@font/roboto_regular"
             android:textSize="20sp"/>
 
@@ -138,7 +138,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:text="Назва тарифу"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:fontFamily="@font/roboto_regular"
             android:textSize="20sp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -154,7 +154,7 @@
         android:paddingVertical="8dp"
         android:paddingHorizontal="15dp"
         android:text="Детальніше"
-        android:fontFamily="@font/roboto_regular"
+        android:fontFamily="@font/roboto_medium"
         android:textSize="22sp"
         android:textAllCaps="false"
         android:background="@drawable/custom_orange_bt"/>

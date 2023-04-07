@@ -61,7 +61,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         android:text="Мобільний\nінтернет"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:fontFamily="@font/roboto_regular"
                         android:textSize="20sp"/>
 
@@ -72,7 +72,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintBottom_toTopOf="@id/fragment_activity__available_internet_tb"
                         android:text="80 000 mb"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:fontFamily="@font/roboto_regular"
                         android:textSize="20sp"/>
 
@@ -104,7 +104,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         android:text="Хвилини у\nмережі"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:fontFamily="@font/roboto_regular"
                         android:textSize="20sp"/>
 
@@ -115,7 +115,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintBottom_toTopOf="@id/fragment_activity__available_minutes_tb"
                         android:text="Безліміт"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:fontFamily="@font/roboto_regular"
                         android:textSize="20sp"/>
 
@@ -148,7 +148,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         android:text="Хвилини на інших операторів"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:fontFamily="@font/roboto_regular"
                         android:textSize="20sp"/>
 
@@ -159,7 +159,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintBottom_toTopOf="@id/fragment_activity__available_other_minutes_tb"
                         android:text="300 хв"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:fontFamily="@font/roboto_regular"
                         android:textSize="20sp"/>
 
@@ -192,7 +192,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         android:text="SMS"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:fontFamily="@font/roboto_regular"
                         android:textSize="20sp"/>
 
@@ -203,7 +203,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintBottom_toTopOf="@id/fragment_activity__available_sms_tb"
                         android:text="Недоступно"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:fontFamily="@font/roboto_regular"
                         android:textSize="20sp"/>
 
@@ -250,15 +250,15 @@
             app:layout_constraintEnd_toStartOf="@+id/fragment_activity__minutes_bt"
             android:layout_marginTop="15dp"
             android:layout_marginStart="15dp"
-            android:background="@drawable/custom_blue_bt"
+            android:background="@drawable/custom_green_bt"
             android:paddingVertical="8dp"
             android:paddingHorizontal="15dp"
             android:textAllCaps="false"
             android:text="Інтернет"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="22sp"
             android:textAlignment="center"
-            android:fontFamily="@font/roboto_regular"/>
+            android:fontFamily="@font/roboto_medium"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/fragment_activity__minutes_bt"
@@ -270,15 +270,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="15dp"
             android:layout_marginHorizontal="15dp"
-            android:background="@drawable/custom_blue_bt"
+            android:background="@drawable/custom_green_bt"
             android:paddingVertical="8dp"
             android:paddingHorizontal="15dp"
             android:textAllCaps="false"
             android:text="Хв. у мережі"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="22sp"
             android:textAlignment="center"
-            android:fontFamily="@font/roboto_regular"/>
+            android:fontFamily="@font/roboto_medium"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/fragment_activity__other_minutes_bt"
@@ -290,15 +290,15 @@
             app:layout_constraintEnd_toStartOf="@+id/fragment_activity__sms_bt"
             android:layout_marginTop="15dp"
             android:layout_marginStart="15dp"
-            android:background="@drawable/custom_blue_bt"
+            android:background="@drawable/custom_green_bt"
             android:paddingVertical="8dp"
             android:paddingHorizontal="15dp"
             android:textAllCaps="false"
             android:text="Хв. на ін. операторів"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="22sp"
             android:textAlignment="center"
-            android:fontFamily="@font/roboto_regular"/>
+            android:fontFamily="@font/roboto_medium"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/fragment_activity__sms_bt"
@@ -310,15 +310,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="15dp"
             android:layout_marginHorizontal="15dp"
-            android:background="@drawable/custom_blue_bt"
+            android:background="@drawable/custom_green_bt"
             android:paddingVertical="8dp"
             android:paddingHorizontal="15dp"
             android:textAllCaps="false"
             android:text="SMS"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="22sp"
             android:textAlignment="center"
-            android:fontFamily="@font/roboto_regular"/>
+            android:fontFamily="@font/roboto_medium"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"

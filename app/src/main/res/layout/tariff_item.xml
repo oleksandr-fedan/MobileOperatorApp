@@ -25,7 +25,7 @@
             android:layout_marginStart="15dp"
             android:text="Назва тарифу"
             android:textSize="22sp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:fontFamily="@font/roboto_regular"/>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -39,7 +39,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginVertical="10dp"
             android:layout_marginEnd="15dp"
-            android:background="@drawable/custom_orange_bt"
+            android:background="@drawable/custom_orange_solid_bt"
             android:drawableStart="@drawable/ic_down_arrow"
             android:paddingHorizontal="15dp"
             android:paddingVertical="4dp"/>
@@ -55,7 +55,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:paddingTop="61dp"
         android:paddingHorizontal="15dp"
-        android:paddingBottom="15dp"
         android:visibility="gone"
         android:background="@drawable/primary_orange_bg">
 
@@ -75,7 +74,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:text="Мобільний інтернет"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:fontFamily="@font/roboto_regular"
                 android:textSize="20sp"/>
 
@@ -87,8 +86,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:text="99 999 мб"
-                android:textColor="@color/white"
-                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
                 android:textSize="20sp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -109,7 +108,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:text="Хвилини у мережі"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:fontFamily="@font/roboto_regular"
                 android:textSize="20sp"/>
 
@@ -121,8 +120,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:text="Безліміт"
-                android:textColor="@color/white"
-                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
                 android:textSize="20sp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -143,7 +142,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:text="Хв. на ін. операторів"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:fontFamily="@font/roboto_regular"
                 android:textSize="20sp"/>
 
@@ -155,8 +154,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:text="10 000 min"
-                android:textColor="@color/white"
-                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
                 android:textSize="20sp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -177,7 +176,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:text="SMS"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:fontFamily="@font/roboto_regular"
                 android:textSize="20sp"/>
 
@@ -189,8 +188,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:text="Недоступно"
-                android:textColor="@color/white"
-                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
                 android:textSize="20sp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -204,8 +203,8 @@
             android:paddingVertical="8dp"
             android:paddingHorizontal="15dp"
             android:text="999 грн/міс"
-            android:textColor="@color/white"
-            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
             android:textSize="20sp"
             android:background="@drawable/primary_blue_bg"/>
 
@@ -215,14 +214,16 @@
             android:minHeight="0dp"
             app:layout_constraintTop_toBottomOf="@id/tariff_item__sms_cl"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:paddingVertical="8dp"
             android:paddingHorizontal="15dp"
             android:text="Підключити"
-            android:textColor="@color/white"
-            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
             android:textSize="20sp"
             android:textAllCaps="false"
-            android:background="@drawable/custom_blue_bt"/>
+            android:background="@drawable/custom_orange_bt"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
