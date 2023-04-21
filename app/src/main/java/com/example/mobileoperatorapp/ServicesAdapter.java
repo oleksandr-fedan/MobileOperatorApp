@@ -38,7 +38,8 @@ public class ServicesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
         serviceDescription.setText(serviceModels.get(position).getDescription());
         servicePrice.setText(serviceModels.get(position).getPrice() + " грн");
-        detailsRV.addItemDecoration(new ItemSpacingDecoration(DpToPixels.convert(15, holder.itemView.getContext())));
+        if (detailsRV.getItemDecorationCount() == 0)
+            detailsRV.addItemDecoration(new ItemSpacingDecoration(DpToPixels.convert(15, holder.itemView.getContext())));
         detailsRV.setAdapter(serviceModels.get(position).getAdapter());
 
         detailsButton.setOnClickListener(v -> {
