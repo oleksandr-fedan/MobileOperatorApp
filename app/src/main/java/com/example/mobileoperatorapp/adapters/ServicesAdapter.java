@@ -1,4 +1,4 @@
-package com.example.mobileoperatorapp;
+package com.example.mobileoperatorapp.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +10,11 @@ import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.mobileoperatorapp.R;
+import com.example.mobileoperatorapp.models.ServiceModel;
+import com.example.mobileoperatorapp.utils.DpToPixels;
+import com.example.mobileoperatorapp.utils.ItemSpacingDecoration;
 
 import java.util.List;
 

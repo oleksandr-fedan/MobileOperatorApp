@@ -1,4 +1,4 @@
-package com.example.mobileoperatorapp;
+package com.example.mobileoperatorapp.views;
 
 import android.os.Bundle;
 
@@ -10,6 +10,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.mobileoperatorapp.R;
+import com.example.mobileoperatorapp.adapters.TariffsAdapter;
+import com.example.mobileoperatorapp.models.TariffModel;
+import com.example.mobileoperatorapp.utils.DpToPixels;
+import com.example.mobileoperatorapp.utils.ItemSpacingDecoration;
 
 import java.util.ArrayList;
 import java.util.List;

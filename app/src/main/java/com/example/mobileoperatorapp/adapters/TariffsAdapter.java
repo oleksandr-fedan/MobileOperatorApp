@@ -1,6 +1,5 @@
-package com.example.mobileoperatorapp;
+package com.example.mobileoperatorapp.adapters;
 
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,9 @@ import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.mobileoperatorapp.R;
+import com.example.mobileoperatorapp.models.TariffModel;
 
 import java.util.List;
 

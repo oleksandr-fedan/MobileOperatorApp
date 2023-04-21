@@ -1,4 +1,4 @@
-package com.example.mobileoperatorapp;
+package com.example.mobileoperatorapp.utils;
 
 import android.graphics.Rect;
 import android.view.View;

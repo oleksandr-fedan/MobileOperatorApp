@@ -1,4 +1,4 @@
-package com.example.mobileoperatorapp;
+package com.example.mobileoperatorapp.models;
 
 public class ServiceDetailsModel {
     private final String detailName;

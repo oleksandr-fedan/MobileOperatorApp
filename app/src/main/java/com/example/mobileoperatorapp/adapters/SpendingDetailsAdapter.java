@@ -1,4 +1,4 @@
-package com.example.mobileoperatorapp;
+package com.example.mobileoperatorapp.adapters;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -6,6 +6,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.mobileoperatorapp.R;
+import com.example.mobileoperatorapp.models.SpendingDetailsModel;
 
 import java.time.format.DateTimeFormatter;
 import java.util.List;

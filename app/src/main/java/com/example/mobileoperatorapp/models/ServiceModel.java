@@ -1,6 +1,6 @@
-package com.example.mobileoperatorapp;
+package com.example.mobileoperatorapp.models;
 
-import java.util.List;
+import com.example.mobileoperatorapp.adapters.ServiceDetailsAdapter;
 
 public class ServiceModel {
     private final String description;

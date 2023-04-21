@@ -1,4 +1,4 @@
-package com.example.mobileoperatorapp;
+package com.example.mobileoperatorapp.models;
 
 import java.time.LocalDate;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package com.example.mobileoperatorapp;
+package com.example.mobileoperatorapp.views;
 
 import android.os.Bundle;
 
@@ -8,15 +8,18 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ScrollView;
+
+import com.example.mobileoperatorapp.utils.DpToPixels;
+import com.example.mobileoperatorapp.utils.ItemSpacingDecoration;
+import com.example.mobileoperatorapp.R;
+import com.example.mobileoperatorapp.adapters.SpendingDetailsAdapter;
+import com.example.mobileoperatorapp.models.SpendingDetailsModel;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.Date;
 import java.util.List;
 
 public class ActivityFragment extends Fragment {
