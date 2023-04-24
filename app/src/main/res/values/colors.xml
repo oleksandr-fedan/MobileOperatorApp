@@ -13,4 +13,5 @@
     <color name="white">#ffFCFCFC</color>
     <color name="transparent">#00ffffff</color>
     <color name="grey">#474747</color>
+    <color name="error_red">#EB4C42</color>
 </resources>
