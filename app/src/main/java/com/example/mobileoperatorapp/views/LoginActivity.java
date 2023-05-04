@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
                     errorTV.setTextColor((ContextCompat.getColor(view.getContext(), R.color.error_red)));
 
                     if (emptyNumber) errorTV.setText("Введіть номер");
-                    else if (code == null || code.isEmpty()) { //не понятно почему код == елс всегда фолс ?????
+                    else if (code == null || code.isEmpty()) {
                         errorTV.setText("Помилка підключення");
                     } else if (code.equals("-1")) {
                         errorTV.setText("Вказано невірний номер");
@@ -84,7 +84,9 @@ public class LoginActivity extends AppCompatActivity {
                     }
                     else {
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        intent.putExtra("phoneNumber", userNumberMET.getUnMasked());
                         startActivity(intent);
+                        finish();
                     }
                 });
             }
