@@ -37,9 +37,9 @@
             android:background="@drawable/custom_input"
             android:paddingVertical="15dp"
             android:layout_marginHorizontal="15dp"
-            app:mask="+380 (__) __ __ ___"
+            app:mask="+380 _________"
             app:maskStyle="persistent"
-            android:hint="+380 (__) __ __ ___"
+            android:hint="+380 "
             android:textAlignment="center"
             android:fontFamily="@font/roboto_regular"
             android:textSize="24sp" />
