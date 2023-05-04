@@ -1,43 +1,93 @@
 package com.example.mobileoperatorapp.models;
 
-public class TariffModel {
-    private final String name;
-    private final double internetQuantity;
-    private final double minutesQuantity;
-    private final double otherMinutesQuantity;
-    private final int smsQuantity;
-    private final double price;
+import java.util.List;
 
-    public TariffModel(String name, double internetQuantity, double minutesQuantity, double otherMinutesQuantity, int smsQuantity, double price) {
+public class TariffModel {
+    private int id;
+    private String name;
+    private double price;
+    private double internetQuantity;
+    private double minutesQuantity;
+    private double otherMinutesQuantity;
+    private int smsQuantity;
+    private List<UserModel> users;
+
+    public TariffModel(int id, String name, double price, double internetQuantity, double minutesQuantity, double otherMinutesQuantity, int smsQuantity, List<UserModel> users) {
+        this.id = id;
         this.name = name;
+        this.price = price;
         this.internetQuantity = internetQuantity;
         this.minutesQuantity = minutesQuantity;
         this.otherMinutesQuantity = otherMinutesQuantity;
         this.smsQuantity = smsQuantity;
-        this.price = price;
+        this.users = users;
+    }
+
+    public TariffModel() {
+
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
     public double getInternetQuantity() {
         return internetQuantity;
+    }
+
+    public void setInternetQuantity(double internetQuantity) {
+        this.internetQuantity = internetQuantity;
     }
 
     public double getMinutesQuantity() {
         return minutesQuantity;
     }
 
+    public void setMinutesQuantity(double minutesQuantity) {
+        this.minutesQuantity = minutesQuantity;
+    }
+
     public double getOtherMinutesQuantity() {
         return otherMinutesQuantity;
+    }
+
+    public void setOtherMinutesQuantity(double otherMinutesQuantity) {
+        this.otherMinutesQuantity = otherMinutesQuantity;
     }
 
     public int getSmsQuantity() {
         return smsQuantity;
     }
 
-    public double getPrice() {
-        return price;
+    public void setSmsQuantity(int smsQuantity) {
+        this.smsQuantity = smsQuantity;
+    }
+
+    public List<UserModel> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<UserModel> users) {
+        this.users = users;
     }
 }
