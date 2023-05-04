@@ -12,17 +12,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mobileoperatorapp.R;
+import com.example.mobileoperatorapp.ServerConnection;
 import com.example.mobileoperatorapp.adapters.TariffsAdapter;
 import com.example.mobileoperatorapp.models.TariffModel;
 import com.example.mobileoperatorapp.utils.DpToPixels;
 import com.example.mobileoperatorapp.utils.ItemSpacingDecoration;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class TariffsFragment extends Fragment {
-    private final List<TariffModel> tariffs = new ArrayList<>();
-    private final TariffsAdapter adapter = new TariffsAdapter(tariffs);
+    private List<TariffModel> tariffs = null;
+    private TariffsAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -35,13 +35,16 @@ public class TariffsFragment extends Fragment {
 
         RecyclerView recyclerView = view.findViewById(R.id.fragment_tariffs__tariffs_rv);
 
-        tariffs.add(new TariffModel("Тариф 1", 3, 500, 0, 200, 350.0));
-        tariffs.add(new TariffModel("Тариф 2", 10, 1500, 100, 1000, 750.0));
-        tariffs.add(new TariffModel("Тариф 3", 30, 3000, 1000, 3000, 1500.0));
-        tariffs.add(new TariffModel("Тариф 4", 50, 5000, 3000, 5000, 2500.0));
-        tariffs.add(new TariffModel("Тариф 5", 100, 10000, 5000, 10000, 5000.0));
+        Thread asyncThread = new Thread(() -> {
+            ServerConnection connection = new ServerConnection();
+            tariffs = connection.getTariffs();
 
-        recyclerView.addItemDecoration(new ItemSpacingDecoration(DpToPixels.convert(15, getContext())));
-        recyclerView.setAdapter(adapter);
+            getActivity().runOnUiThread(() -> {
+                adapter = new TariffsAdapter(tariffs);
+                recyclerView.addItemDecoration(new ItemSpacingDecoration(DpToPixels.convert(15, getContext())));
+                recyclerView.setAdapter(adapter);
+            });
+        });
+        asyncThread.start();
     }
 }
