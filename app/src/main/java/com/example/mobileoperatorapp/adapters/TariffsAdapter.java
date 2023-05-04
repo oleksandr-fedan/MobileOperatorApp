@@ -33,21 +33,50 @@ public class TariffsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        TextView name = holder.itemView.findViewById(R.id.tariff_item__tariff_name);
-        TextView internetQuantity = holder.itemView.findViewById(R.id.tariff_item__internet_quantity_tv);
-        TextView minutesQuantity = holder.itemView.findViewById(R.id.tariff_item__minutes_quantity_tv);
-        TextView otherMinutesQuantity = holder.itemView.findViewById(R.id.tariff_item__other_minutes_quantity_tv);
-        TextView smsQuantity = holder.itemView.findViewById(R.id.tariff_item__sms_quantity_tv);
-        TextView price = holder.itemView.findViewById(R.id.tariff_item__price_tv);
+        TextView nameTV = holder.itemView.findViewById(R.id.tariff_item__tariff_name);
+        TextView internetQuantityTV = holder.itemView.findViewById(R.id.tariff_item__internet_quantity_tv);
+        TextView minutesQuantityTV = holder.itemView.findViewById(R.id.tariff_item__minutes_quantity_tv);
+        TextView otherMinutesQuantityTV = holder.itemView.findViewById(R.id.tariff_item__other_minutes_quantity_tv);
+        TextView smsQuantityTV = holder.itemView.findViewById(R.id.tariff_item__sms_quantity_tv);
+        TextView priceTV = holder.itemView.findViewById(R.id.tariff_item__price_tv);
         AppCompatButton detailsButton = holder.itemView.findViewById(R.id.tariff_item__tariff_details_bt);
         ConstraintLayout cl = holder.itemView.findViewById(R.id.tariff_item__tariff_details_cl);
 
-        name.setText(tariffs.get(position).getName());
-        internetQuantity.setText(tariffs.get(position).getInternetQuantity() + " Мб");
-        minutesQuantity.setText(tariffs.get(position).getMinutesQuantity() + " Хв");
-        otherMinutesQuantity.setText(tariffs.get(position).getOtherMinutesQuantity() + " Хв");
-        smsQuantity.setText(tariffs.get(position).getSmsQuantity() + " Шт");
-        price.setText(tariffs.get(position).getPrice() + " грн/міс");
+        nameTV.setText(tariffs.get(position).getName());
+
+        double internetQuantity = tariffs.get(position).getInternetQuantity();
+        if (internetQuantity == -1)
+            internetQuantityTV.setText("Безліміт");
+        else if (internetQuantity == 0)
+            internetQuantityTV.setText("Відсутній");
+        else
+            internetQuantityTV.setText(internetQuantity + " Мб");
+
+        double minutesQuantity = tariffs.get(position).getMinutesQuantity();
+        if (minutesQuantity == -1)
+            minutesQuantityTV.setText("Безліміт");
+        else if (minutesQuantity == 0)
+            minutesQuantityTV.setText("Відсутні");
+        else
+            minutesQuantityTV.setText(minutesQuantity + " Хв");
+
+        double otherMinutesQuantity = tariffs.get(position).getOtherMinutesQuantity();
+        if (otherMinutesQuantity == -1)
+            otherMinutesQuantityTV.setText("Безліміт");
+        else if (otherMinutesQuantity == 0)
+            otherMinutesQuantityTV.setText("Відсутні");
+        else
+            otherMinutesQuantityTV.setText(otherMinutesQuantity + " Хв");
+
+        int smsQuantity = tariffs.get(position).getSmsQuantity();
+        if (smsQuantity == -1)
+            smsQuantityTV.setText("Безліміт");
+        else if (smsQuantity == 0)
+            smsQuantityTV.setText("Відсутні");
+        else
+            smsQuantityTV.setText(smsQuantity + " Шт");
+
+        priceTV.setText(tariffs.get(position).getPrice() + " грн/міс");
 
         detailsButton.setOnClickListener(v -> {
             if (cl.getVisibility() == View.GONE) {
