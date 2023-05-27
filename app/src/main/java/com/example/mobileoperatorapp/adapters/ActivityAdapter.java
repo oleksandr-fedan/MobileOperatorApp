@@ -8,15 +8,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mobileoperatorapp.R;
-import com.example.mobileoperatorapp.models.SpendingDetailsModel;
+import com.example.mobileoperatorapp.models.ActivityModel;
 
+import java.text.DecimalFormat;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-public class SpendingDetailsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
-    private final List<SpendingDetailsModel> spendingDetails;
+public class ActivityAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
+    private final List<ActivityModel> spendingDetails;
 
-    public SpendingDetailsAdapter(List<SpendingDetailsModel> spendingDetails) {
+    public ActivityAdapter(List<ActivityModel> spendingDetails) {
         this.spendingDetails = spendingDetails;
     }
 
@@ -34,7 +35,23 @@ public class SpendingDetailsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         TextView quantity = holder.itemView.findViewById(R.id.fragment_activity__details_spending_item__quantity_tv);
 
         date.setText(spendingDetails.get(position).getDate().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")));
-        quantity.setText(String.valueOf(spendingDetails.get(position).getQuantity()));
+
+        DecimalFormat decimalFormat;
+        switch (spendingDetails.get(position).getType()) {
+            case INTERNET:
+                quantity.setText(spendingDetails.get(position).getQuantity() + " Мб");
+                break;
+            case MINUTES:
+            case OTHER_MINUTES:
+                decimalFormat = new DecimalFormat("#");
+                quantity.setText(decimalFormat.format(spendingDetails.get(position).getQuantity()) + " Хв");
+                break;
+            case SMS:
+                decimalFormat = new DecimalFormat("#");
+                quantity.setText(decimalFormat.format(spendingDetails.get(position).getQuantity()) + " Шт");
+                break;
+        }
+
     }
 
     @Override
