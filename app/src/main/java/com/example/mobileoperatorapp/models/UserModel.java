@@ -1,7 +1,5 @@
 package com.example.mobileoperatorapp.models;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -14,22 +12,8 @@ public class UserModel {
     private Double balance;
     private LocalDateTime connectionDate;
     private TariffModel tariff;
-    private List<SpendingDetailsModel> activities;
-
-//    public UserModel(int id, String phoneNumber, String name, String surname, String middleName, Double balance, TariffModel tariff, List<SpendingDetailsModel> activities) {
-//        this.id = id;
-//        this.phoneNumber = phoneNumber;
-//        this.name = name;
-//        this.surname = surname;
-//        this.middleName = middleName;
-//        this.balance = balance;
-//        this.tariff = tariff;
-//        this.activities = activities;
-//    }
-
-    public UserModel() {
-
-    }
+    private List<ActivityModel> activities;
+    private List<ServiceModel> services;
 
     public int getId() {
         return id;
@@ -95,11 +79,19 @@ public class UserModel {
         this.tariff = tariff;
     }
 
-    public List<SpendingDetailsModel> getActivities() {
+    public List<ActivityModel> getActivities() {
         return activities;
     }
 
-    public void setActivities(List<SpendingDetailsModel> activities) {
+    public void setActivities(List<ActivityModel> activities) {
         this.activities = activities;
+    }
+
+    public List<ServiceModel> getServices() {
+        return services;
+    }
+
+    public void setServices(List<ServiceModel> services) {
+        this.services = services;
     }
 }

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -17,12 +18,20 @@ import com.example.mobileoperatorapp.adapters.TariffsAdapter;
 import com.example.mobileoperatorapp.models.TariffModel;
 import com.example.mobileoperatorapp.utils.DpToPixels;
 import com.example.mobileoperatorapp.utils.ItemSpacingDecoration;
+import com.example.mobileoperatorapp.utils.MyViewModel;
 
 import java.util.List;
 
 public class TariffsFragment extends Fragment {
     private List<TariffModel> tariffs = null;
     private TariffsAdapter adapter;
+    private MyViewModel myViewModel;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        myViewModel = new ViewModelProvider(requireActivity()).get(MyViewModel.class);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -40,7 +49,7 @@ public class TariffsFragment extends Fragment {
             tariffs = connection.getTariffs();
 
             getActivity().runOnUiThread(() -> {
-                adapter = new TariffsAdapter(tariffs);
+                adapter = new TariffsAdapter(tariffs, getContext(), myViewModel);
                 recyclerView.addItemDecoration(new ItemSpacingDecoration(DpToPixels.convert(15, getContext())));
                 recyclerView.setAdapter(adapter);
             });

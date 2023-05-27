@@ -12,21 +12,6 @@ public class TariffModel {
     private int smsQuantity;
     private List<UserModel> users;
 
-    public TariffModel(int id, String name, double price, double internetQuantity, double minutesQuantity, double otherMinutesQuantity, int smsQuantity, List<UserModel> users) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.internetQuantity = internetQuantity;
-        this.minutesQuantity = minutesQuantity;
-        this.otherMinutesQuantity = otherMinutesQuantity;
-        this.smsQuantity = smsQuantity;
-        this.users = users;
-    }
-
-    public TariffModel() {
-
-    }
-
     public int getId() {
         return id;
     }
