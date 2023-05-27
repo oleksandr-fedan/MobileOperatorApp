@@ -9,12 +9,7 @@
         android:id="@+id/navigation_profile"
         android:name="com.example.mobileoperatorapp.views.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile">
-        <argument
-            android:name="phoneNumber"
-            app:argType="string"
-            app:nullable="true" />
-    </fragment>
+        tools:layout="@layout/fragment_profile"/>
 
     <fragment
         android:id="@+id/navigation_activity"

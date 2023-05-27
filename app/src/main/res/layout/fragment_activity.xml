@@ -66,18 +66,18 @@
                         android:textSize="20sp"/>
 
                     <TextView
-                        android:id="@+id/fragment_activity__internet_spent_tb"
+                        android:id="@+id/fragment_activity__internet_spent_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintBottom_toTopOf="@id/fragment_activity__available_internet_tb"
+                        app:layout_constraintBottom_toTopOf="@id/fragment_activity__available_internet_tv"
                         android:text="80 000 mb"
                         android:textColor="@color/black"
                         android:fontFamily="@font/roboto_regular"
                         android:textSize="20sp"/>
 
                     <TextView
-                        android:id="@+id/fragment_activity__available_internet_tb"
+                        android:id="@+id/fragment_activity__available_internet_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintStart_toStartOf="parent"
@@ -109,18 +109,18 @@
                         android:textSize="20sp"/>
 
                     <TextView
-                        android:id="@+id/fragment_activity__minutes_spent_tb"
+                        android:id="@+id/fragment_activity__minutes_spent_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintBottom_toTopOf="@id/fragment_activity__available_minutes_tb"
+                        app:layout_constraintBottom_toTopOf="@id/fragment_activity__available_minutes_tv"
                         android:text="Безліміт"
                         android:textColor="@color/black"
                         android:fontFamily="@font/roboto_regular"
                         android:textSize="20sp"/>
 
                     <TextView
-                        android:id="@+id/fragment_activity__available_minutes_tb"
+                        android:id="@+id/fragment_activity__available_minutes_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintStart_toStartOf="parent"
@@ -153,18 +153,18 @@
                         android:textSize="20sp"/>
 
                     <TextView
-                        android:id="@+id/fragment_activity__other_minutes_spent_tb"
+                        android:id="@+id/fragment_activity__other_minutes_spent_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintBottom_toTopOf="@id/fragment_activity__available_other_minutes_tb"
+                        app:layout_constraintBottom_toTopOf="@id/fragment_activity__available_other_minutes_tv"
                         android:text="300 хв"
                         android:textColor="@color/black"
                         android:fontFamily="@font/roboto_regular"
                         android:textSize="20sp"/>
 
                     <TextView
-                        android:id="@+id/fragment_activity__available_other_minutes_tb"
+                        android:id="@+id/fragment_activity__available_other_minutes_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintStart_toStartOf="parent"
@@ -197,18 +197,18 @@
                         android:textSize="20sp"/>
 
                     <TextView
-                        android:id="@+id/fragment_activity__sms_spent_tb"
+                        android:id="@+id/fragment_activity__sms_spent_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintBottom_toTopOf="@id/fragment_activity__available_sms_tb"
+                        app:layout_constraintBottom_toTopOf="@id/fragment_activity__available_sms_tv"
                         android:text="Недоступно"
                         android:textColor="@color/black"
                         android:fontFamily="@font/roboto_regular"
                         android:textSize="20sp"/>
 
                     <TextView
-                        android:id="@+id/fragment_activity__available_sms_tb"
+                        android:id="@+id/fragment_activity__available_sms_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintStart_toStartOf="parent"

@@ -15,14 +15,15 @@
         android:background="@drawable/primary_blue_bg">
 
         <TextView
-            android:id="@+id/service_item__tariff_name"
-            android:layout_width="wrap_content"
+            android:id="@+id/service_item__service_name_tv"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/service_item__service_details_bt"
             android:layout_marginVertical="8dp"
-            android:layout_marginStart="15dp"
+            android:layout_marginHorizontal="15dp"
             android:text="Назва послуги"
             android:textSize="22sp"
             android:textColor="@color/black"
@@ -80,24 +81,152 @@
                 android:textSize="20sp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/service_item__services_details_rv"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/service_item__internet_cl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/service_item__description_cl"
             android:layout_marginTop="15dp"
-            app:layout_constraintTop_toBottomOf="@id/service_item__description_cl"
-            app:layout_constraintBottom_toTopOf="@+id/service_item__price_tv"
-            android:scrollbars="none"
-            android:clipToPadding="false"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="15dp"
+            android:visibility="visible"
+            android:background="@drawable/primary_blue_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Мобільний інтернет"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/service_item__internet_quantity_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="99 999 мб"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="20sp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/service_item__minutes_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/service_item__internet_cl"
+            android:layout_marginTop="15dp"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="15dp"
+            android:visibility="visible"
+            android:background="@drawable/primary_blue_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Хвилини у мережі"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/service_item__minutes_quantity_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Безліміт"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="20sp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/service_item__other_minutes_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/service_item__minutes_cl"
+            android:layout_marginTop="15dp"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="15dp"
+            android:background="@drawable/primary_blue_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Хв. на ін. операторів"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/service_item__other_minutes_quantity_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="10 000 min"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="20sp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/service_item__sms_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/service_item__other_minutes_cl"
+            android:layout_marginTop="15dp"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="15dp"
+            android:background="@drawable/primary_blue_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="SMS"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/service_item__sms_quantity_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Недоступно"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="20sp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
             android:id="@+id/service_item__price_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/service_item__services_details_rv"
+            app:layout_constraintTop_toBottomOf="@id/service_item__sms_cl"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginVertical="15dp"
             android:paddingVertical="8dp"
             android:paddingHorizontal="15dp"
             android:text="999 грн"
@@ -107,10 +236,11 @@
             android:background="@drawable/primary_blue_bg"/>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/service_item__connect_bt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minHeight="0dp"
-            app:layout_constraintTop_toBottomOf="@id/service_item__services_details_rv"
+            app:layout_constraintTop_toBottomOf="@id/service_item__sms_cl"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginTop="15dp"
